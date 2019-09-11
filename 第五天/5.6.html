@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>按钮一</button>
+    <button>按钮二</button>
+    <button>按钮三</button>
+    <div id="box">对应按钮一</div>
+    <script>
+    let ary=['对应按钮一','对应按钮二','对应按钮三'];
+    let btn=document.querySelectorAll('button');
+    let len=btn.length;
+    for(var i=0;i<len;i++){
+        console.log(i)
+        btn[i].index=i
+        btn[i].onclick=function(){
+            box.innerHTML=ary[this.index]
+        }
+    } -->
+
+    <!-- <button>按钮一</button>
+    <button>按钮二</button>
+    <button>按钮三</button>
+    <div id="box">对应按钮一</div>
+    <script>
+    let ary=['对应按钮一','对应按钮二','对应按钮三'];
+    let btn=document.querySelectorAll('button');
+    let len=btn.length;
+    for(let i=0;i<len;i++){
+        btn[i].index=i;
+        btn[i].onclick=function(){
+            box.innerHTML=ary[this.index];
+        }
+    }
+    
+    
+</script> -->
+    <!-- </script> -->
+    <button>一</button>
+    <button>二</button>
+    <button>三</button>
+    <button>四</button>
+    <div id="box">对应一</div>
+    <script>
+    let ary=['对应一','对应二','对应三','对应四'];
+    let btn=document.querySelectorAll('button');
+    let len=btn.length;
+    for(let i=0;i<len;i++){
+        btn[i].index=i;
+        btn[i].onclick=function(){
+            box.innerHTML=ary[this.index];
+        }
+    }
+    
+    
+    </script>
+</body>
+</html>

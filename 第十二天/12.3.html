@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    ul li{
+        height: 50px;
+        line-height: 50px;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+<script>
+lis=document.querySelectorAll('ul li')
+console.log(lis)
+for (let i = 0; i < lis.length; i++) {
+//   lis[i].index=i;
+let hui=i%2?'pink':'green';
+ 
+
+lis[i].style.background=hui;
+lis[i].myIndex = i;
+    lis[i].onmouseenter=function(){
+        this.style.background='yellow';
+
+
+  
+  }
+  lis[i].onmouseleave=function(){
+        this.style.background=i%2?'pink':'green';
+    }
+    lis[i].onclick=function(){
+    alert(`我是第${this.myIndex+1}个元素`)
+
+    }
+}
+// var oLis = document.querySelectorAll('ul>li');
+//     for(var i = 0; i < oLis.length;i++){
+//         var str = i%2 ? 'salmon' : 'darkcyan';
+//         oLis[i].style.background = str;
+//         oLis[i].mybg = str;
+//         oLis[i].myIndex = i;
+//         oLis[i].onmouseenter = function(){
+//             this.style.background = 'gold'
+//         }
+//         oLis[i].onmouseleave = function(){
+//             this.style.background = this.mybg;
+//         }
+//         oLis[i].onclick = function(){
+//             alert(`我是第${this.myIndex+1}个元素`)
+//         }
+//     }
+
+</script>
+</body>
+</html>

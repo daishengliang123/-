@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    #u1 {
+        width: 320px;
+        height: 425px;
+        margin: 0 auto;
+        border: 2px solid #000;
+
+    }
+
+    li {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: lavender;
+        margin: 5px 0 0 5px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    #box {
+        width: 320px;
+        height: 100px;
+        border: 2px solid pink;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    .active {
+        background: yellow;
+    }
+</style>
+
+<body>
+
+    <ul id="u1">
+        <li class="active">
+            <p>一月</p>
+        </li>
+        <li>
+            <p>二月</p>
+        </li>
+        <li>
+            <p>三月</p>
+        </li>
+        <li>
+            <p>四月</p>
+        </li>
+        <li>
+            <p>五月</p>
+        </li>
+        <li>
+            <p>六月</p>
+        </li>
+        <li>
+            <p>七月</p>
+        </li>
+        <li>
+            <p>八月</p>
+        </li>
+        <li>
+            <p>九月</p>
+        </li>
+        <li>
+            <p>十月</p>
+        </li>
+        <li>
+            <p>十一月</p>
+        </li>
+        <li>
+            <p>十二月</p>
+        </li>
+
+    </ul>
+    <div id="box">
+        
+        <p>1月活动</p>
+
+    </div>
+    <script>
+        let lis = document.querySelectorAll('li');
+        let ary = ['1月活动', '2月活动', '3月活动', '4月活动', '5月活动', '6月活动', '7月活动', '8月活动', '9月活动', '10月活动', '11月活动', '12月活动'];
+
+let len=lis.length;
+let l1=lis[0];
+
+for(var i=0;i<len;i++){
+        lis[i].index=i;
+
+   
+    lis[i].onclick=function(){
+    if(this==l1)
+        return;
+       
+
+     
+        this.className='active';
+        l1.className='';
+
+        box.innerHTML=ary[this.index];
+ 
+        l1=this;
+     }
+}
+
+        // 1. 点击li，让div里面显示对应的语句
+        // let li = lis[0];
+        // let len = lis.length;//12
+        // for (var i = 0; i < len; i++) {
+            
+        //     lis[i].index = i;//给每一个Li自定义一个属性，并把i的值复制给对应的index，当前li就有一个自定义的index，index的值是数字，可以和数字的下标一一对应
+        //     console.dir(lis[i]);
+        //     lis[i].onclick = function () {
+        //         box.innerHTML = ary[this.index];//box框的内容为当前按钮所对应的ary值
+        //         if(this==li) return;//如果当前点击的按钮是上一个 ，中断，不清空颜色
+        //         li.className='';//清空上一个按钮颜色
+        //         this.className='active';//点击当前的按钮出颜色
+        //         li = this; //当前等于上一个
+        //         //
+        //     }
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#box{
+    width: 400px;
+
+}
+#box div{
+    width: 400px;
+    height: 200px;
+    border:1px solid #000;
+    display: none;
+}
+#box div.show{
+    display: block;
+
+}
+.active{
+    background: yellow;
+}
+
+</style>
+<body>
+    <div id="box">
+        <button class="active">按钮一</button>
+        <button>按钮二</button>
+        <button>按钮三</button>
+        <div class="show">内容一</div>
+        <div>内容二</div>
+        <div>内容三</div>
+    </div>
+<script>
+const divs=document.querySelectorAll('#box div');
+const btns=document.querySelectorAll('button');
+
+let len=btns.length;
+let btn=btns[0];
+for(var i=0;i<len;i++){
+// console.log(i)
+btns[i].index=i;
+btns[i].onclick=function(){
+    if(this==btn)
+    return;
+
+    btn.className='';
+    divs[btn.index].className='';
+
+    this.className='active';
+
+    divs[this.index].className='show';
+    btn=this;
+
+   
+}
+}
+
+
+
+
+
+
+
+// let btn=btns[0];
+// for(var i=0,len=btns.length;i<len;i++){
+//    btns[i].index=i;
+//    btns[i].onclick=function(){
+//        if(this==btn)
+//        return;
+//        btn=this;
+//        btn.className='';
+//        divs[btn.index].className='';
+//        this.className='active';
+//        divs[this.index].className='show';
+      
+//    }
+// }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">0</button>
+    <button id="btn2">0</button>
+    <button id="btn3">0</button>
+<script>
+
+//  let num2=0;
+// btn2.onclick=function(){
+//     if(num2<2){
+//         num2 ++;
+//         btn2.innerHTML=num2;
+//     }else{
+//         btn2.disabled=true;
+//     }
+// }
+
+// let num3=0;
+// btn3.onclick=function(){
+//     if(num3<2){
+//         num3 ++;
+//         btn3.innerHTML=num3;
+//     }else{
+//         btn2.disabled=true;
+    
+//     }
+// }
+const btns=document.querySelectorAll('button');
+for(var i=0;i<btns.length;i++){
+    // console.log(i);
+    btns[i].num=0;
+    // console.dir(btns[0])
+    btns[i].onclick=function(){
+        if(this.num<2){
+            this.num ++;
+            this.innerHTML=this.num;
+
+        }else{
+            this.disabled=true;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

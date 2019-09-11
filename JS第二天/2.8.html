@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    设置属性：<input type="text" id="txt">
+    设置属性值：<input type="text" id="val">
+    <button id="btn">OK</button>
+    <div id="box" >
+        啦啦啦啦啦
+    </div>
+    <script>
+        btn.onclick = function (){
+            let vt = txt.value;
+            let vv = val.value;
+            box.style[vt] = vv;
+        }
+    </script>
+</body>
+</html>

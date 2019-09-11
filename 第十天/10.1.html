@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //push
+        //往数组的最后一位添加一个或者多个数据
+        //返回值为新数组长度
+        
+            // let ary = [1,2,3];
+            // console.log(ary.push(4)) //4 一共有4个数据
+            // console.log(ary)//[1,2,3,4]
+            // let ary=[1,2,3];
+            // console.log(ary.push(5));
+            // console.log(ary) //[1,2,3,5]
+
+        //     function push(ary,...arg){
+        //         let narr = [...ary,...arg];
+        //         for(let i=0;i<narr.length;i++){
+        //             ary[i] = narr[i];
+        //         }
+        //         return narr.length;
+        //     }
+
+        //     push(ary,5,6)
+        // console.log(push)
+    
+        // let ary = [1,6,5,3,9];
+
+// ary.sort((a,b)=>{
+//     return a - b
+// })
+// ary.sort((a,b)=>{
+//     return b - a
+// })
+
+//ary  [1,3,5,6,9]
+// ary.sort((a,b) =>{
+//     return b-a
+// }
+// ary.sort((a,b)=>{
+//     return a-b
+// }
+// let ary = [1,6,5,3,9];
+
+// ary.reduce((prev,next) => prev+next)
+//     let ary=[1,2,34,6]
+// ary.reduce((prev,next)=>
+//      prev+next)
+let ary = [1,6,5,[3,9,[10]]];
+            ary.flat(Infinity)
+let arr=[1,2,3,[3,4,[1,2,[23,[12,34,[2]]]]]]
+arr.flat(Infinity)
+    </script>
+</body>
+</html>

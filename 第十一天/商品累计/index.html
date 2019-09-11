@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="price.css" />
+</head>
+
+<body onselectstart="return false;">
+	<div class="wrap">
+		<div class="box">
+			<ul class="list">
+				<li>
+					<i></i>
+					<em>0</em>
+					<i></i>
+					<span>
+						单价：<strong>12.5元 </strong> 小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i></i>
+					<em>0</em>
+					<i></i>
+					<span>
+						单价：<strong>10.5元 </strong> 小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i></i>
+					<em>0</em>
+					<i></i>
+					<span>
+						单价：<strong>8.5元 </strong> 小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i></i>
+					<em>0</em>
+					<i></i>
+					<span>
+						单价：<strong>8元 </strong> 小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i></i>
+					<em>0</em>
+					<i></i>
+					<span>
+						单价：<strong>14.5元 </strong> 小计：<strong>0元</strong>
+					</span>
+				</li>
+			</ul>
+			<div class="info">
+				<span>商品公合计：<em>0</em>件</span>
+				<span>共花费了：<em>0</em>元</span>
+				<br />
+				<br />
+				<span>其中最贵的商品单价是：<em>0</em>元</span>
+			</div>
+		</div>
+	</div>
+	<script>
+
+		// let is = document.querySelectorAll('i');
+		// let ems = document.querySelectorAll('li em');
+		let ary = document.querySelectorAll('.list li i:nth-of-type(1)');
+			let arr = document.querySelectorAll('.list li i:nth-of-type(2)');
+			let ems = document.querySelectorAll('.list em');
+			let  jg = document.querySelectorAll('.list span');
+			let  xj = document.querySelectorAll('.list strong');
+			console.log(xj)
+			
+			 
+			//  for(let i=0; i<ary.length; i++){
+			// 	let num = 0;
+            //       ary[i].onclick = function(){
+			// 		  num--;
+			// 		  if(num < 0){
+            //                num = 0;
+			// 		  }				  
+			// 		  ems[i].innerText = num;
+			// 		  nums=num;
+			// 	  }
+			// 	  let nums = 0;
+			// 	  arr[i].onclick = function(){				  
+			// 		  nums++;
+			// 		  ems[i].innerText = nums;
+			// 		   num= nums;
+			// 	  }
+
+
+			//  }
+	
+// for(let i=0;i<ary.length;i++){
+// 	let num=0;
+// 	let nums=0;
+// 	ary[i].onclick=function(){
+// 		num--;
+// 		if(num<0){
+// num=0;
+// 		}
+// 		ems[i].innerText=num;
+// 		nums=num
+
+// 	}
+// 	arr[i].onclick=function(){
+// 		nums++;
+// 		ems[i].innerText=nums
+// 		num=nums;
+// 	}
+// }
+// for(let i=0;i<ary.length;i++){
+// 	let num=0;
+// 	let nums=0;
+// 	ary[i].onclick=function(){
+// 		num--;
+// 		if(num<0){
+// 			num=0;
+// 		}
+// 		ems[i].innerText=num;
+// 		nums=num
+			
+		
+// 	}
+// 	arr[i].onclick=function(){
+// 		nums++;
+// 		ems[i].innerText=nums;
+// 		num=nums;
+// 	}
+// }
+
+
+	</script>
+</body>
+
+</html>

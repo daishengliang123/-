@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+        lastIndexOf(找谁,从第几个开始)
+            从后往前找，查询指定的数据，找到返回索引，如果没有找到返回-1
+    */
+    let ary = [1,2,3,4,5,1,1];
+    console.log(ary.lastIndexOf(1,2));    
+    console.log(ary.lastIndexOf(2,1))
+    console.log( ary.lastIndexOf(1,0))
+
+
+   /*
+        some:
+            查看数组中是否有一个数据符合条件,只要有一个就返回true，如果都不符合条件返回false
+    */ 
+    // let ary = [true,1,2,6];
+    
+    // console.log(ary.some(item=>item=='7'));
+    // console.log(ary.some(item=>item==true))
+    // console.log(ary.some(item=>item==2))
+    // console.log(ary.some(item=>item==8))
+    /*
+        slice(n,m)
+            截取数组从n到m，但不包含m的数据，返回一个新的数组
+    */
+    // let arr = [0,1,2,6,7,8,9];
+    
+    // console.log(arr.slice(0,3));//012
+    // console.log(arr.slice(4,6));//78
+    // console.log(arr.slice(1,5));//267
+    // console.log(arr.slice(2,4));
+    // //26
+
+
+
+     /*
+        reduce(两个参数)，callback,初始值
+
+        callback(上一次的结果,下一次的值)
+
+        循环数组累积每一次的返回结果
+
+    */
+    // let ary = [10.5,6,3,2,8];//总计
+
+    //  //prev为上次的结果
+    //  let a = ary.reduce(function(prev,next){
+    //     console.log(prev,next);
+    //     return prev + next;
+    // },0);
+
+    // console.log(a);//29.5
+
+    // let a=ary.reduce(function(prev,next){
+    //     console.log(prev,next);
+    //     return prev+next;
+    // },0);
+    // console.log(a)//29.5
+
+
+
+
+     /*
+        flat:
+            数组扁平化操作
+            不写参数的时候，拉平2个数组
+            如果有多维数组，参数可以指定(2)，拉平2个数组
+
+            如果是多个多维数组，可以使用Infinity来表示
+    */
+    let ary = [1,2,3,4,[5,[6,7,[8,9,[10]]]]]; 
+    console.log(ary.flat(Infinity))
+
+
+
+
+
+
+
+
+
+
+     /*
+        sort(callback)
+            callback(a,b) 必须返回一个数字
+
+            正数就交换位置
+            负数就不交互位置
+            0无所谓交不交换位置了
+
+        默认排序是通过字符串编码来排列的
+
+        允许自定义:
+            传入回调函数
+
+        
+        从小到大排列，a-b
+        从大到小排列，b-a
+
+    */
+    // let ary = [6,3,7,'9px',2,'4em','10rem'];
+   
+
+    
+</script>
+</body>
+</html>

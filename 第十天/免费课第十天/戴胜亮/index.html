@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评分</title>
+		<style>
+			body,h1 {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+			.starts{
+				overflow:hidden;
+			}
+			.starts span{
+				display: block;
+				float: left;
+				/* padding: 3px; */
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="pingfen.css"/>
+	</head>
+<body>
+	<div class="wrap">
+		<div class="baidu">
+			<div id="caption" class="caption">
+				<h1></h1>
+				<span>总体评价</span>
+			</div>
+			<div class="context">
+				<ul class="starts">
+					<li id="start0" class="xx2"></li>
+					<li id="start1" class="xx2"></li>
+					<li id="start2" class="xx2"></li>
+					<li id="start3" class="xx2"></li>
+					<li id="start4" class="xx2"></li>
+					
+				</ul>
+				<div id="info" class="info"></div>
+			</div>
+			<div id="tips"  class="tips">
+				小提示：点击星星就能打分
+			</div>
+		</div>
+	</div>
+
+<script>
+	/*
+		xx2 -> 空星
+		xx -> 有星
+		xx3 -> 透明星
+	*/
+
+	let arr = ['极差', '一般', '不错', '推荐', '力推'];
+	// let starts=document.querySelectorAll('.starts .xx2');
+    // let btn=starts[0]
+//    let ul = document.querySelectorAll('.starts')
+   
+
+	// for(let i=0;i<ul.length;i++){console.log(i)}
+	// 	starts[i].index=i
+// let lis = document.querySelectorAll('.starts li');
+ 
+//   let a = 
+  
+let lis = document.querySelectorAll('li');
+
+
+
+start4.onclick=function(){
+	info.index = 4
+    start4.className='xx';
+	start3.className='xx';
+	start2.className='xx';
+	start1.className='xx';
+	start0.className='xx';
+    info.style.display='block';
+	info.innerHTML='力推'
+// btn.className='xx2';
+// btn=this;
+}
+start3.onclick=function(){
+	info.index = 3
+	start3.className='xx';
+    start2.className='xx';
+	start1.className='xx';
+	start0.className='xx';
+	start4.className='xx2';
+	info.style.display='block';
+	info.innerHTML='推简'
+// btn.className='xx2';
+// btn=this;
+}
+start2.onclick=function(){
+	info.index = 2
+	start1.className='xx';
+	start0.className='xx';
+	start3.className='xx2';
+	start4.className='xx2';
+	start2.className='xx';
+	info.style.display='block';
+	info.innerHTML='不错'
+// btn.className='xx2';
+// btn=this;
+}
+start1.onclick=function(){
+	info.index = 1
+	start0.className='xx3';
+	start1.className='xx3';
+	start3.className='xx2';
+	start4.className='xx2';
+	start2.className='xx2';
+	info.style.display='block';
+	info.innerHTML='一般'
+// btn.className='xx2';
+// btn=this;
+}
+start0.onclick=function(){
+	info.index = 0	
+	start0.className='xx3';
+	start1.className='xx2';
+	start2.className='xx2';
+	start3.className='xx2';
+	start4.className='xx2';
+	info.style.display='block';
+	info.innerHTML='极差'
+// btn.className='xx2';
+// btn=this;
+}
+start4.onmouseover=function(){
+    start4.className='xx';
+	start3.className='xx';
+	start2.className='xx';
+	start1.className='xx';
+	start0.className='xx';
+	info.style.display='block';
+	info.innerHTML='力推'
+// btn.className='xx2';
+// btn=this;
+}
+start3.onmouseover=function(){
+	start3.className='xx';
+    start2.className='xx';
+	start1.className='xx';
+	start0.className='xx';
+	start4.className='xx2';
+    info.style.display='block';
+	info.innerHTML='推荐'
+
+// btn.className='xx2';
+// btn=this;
+}
+start2.onmouseover=function(){
+	start1.className='xx';
+	start0.className='xx';
+	start3.className='xx2';
+	start4.className='xx2';
+	start2.className='xx';
+	info.style.display='block';
+	info.innerHTML='不错'
+// btn.className='xx2';
+// btn=this;
+}
+start1.onmouseover=function(){
+	start0.className='xx3';
+	start1.className='xx3';
+	start3.className='xx2';
+	start4.className='xx2';
+	start2.className='xx2';
+	info.style.display='block';
+	info.innerHTML='一般'
+// btn.className='xx2';
+// btn=this;
+}
+
+start0.onmouseover=function(){
+	start0.className='xx3';
+	start1.className='xx2';
+	start2.className='xx2';
+	start3.className='xx2';
+	start4.className='xx2';
+	info.style.display='block';
+	info.innerHTML='极差'
+// btn.className='xx2';
+// btn=this;
+}
+
+
+start0.onmouseout = function(){
+	if(info.index == undefined){
+		info.style.display = 'none'
+		start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx2';
+		}
+	if (info.index == 4) {
+		start4.className='xx';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+		info.style.background = 'block'
+	}else if(info.index == 3){
+	    start4.className='xx2';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 2){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 1){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx3';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 0){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}
+	}
+	start1.onmouseout = function(){
+		if(info.index == undefined){
+			info.style.display = 'none'
+		start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx2';
+		info.innerHTML=arr[info.index]
+		}
+	if (info.index == 4) {
+		start4.className='xx';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 3){
+	    start4.className='xx2';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 2){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 1){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx3';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 0){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}
+	}
+	start2.onmouseout = function(){
+		if(info.index == undefined){
+			info.style.display = 'none'
+		start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx2';
+		info.innerHTML=arr[info.index]
+		}
+	if (info.index == 4) {
+		start4.className='xx';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 3){
+	    start4.className='xx2';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 2){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 1){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx3';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 0){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}
+	}
+	start3.onmouseout = function(){
+		if(info.index == undefined){
+			info.style.display = 'none'
+		start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx2';
+		info.innerHTML=arr[info.index]
+		}
+	if (info.index == 4) {
+		start4.className='xx';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 3){
+	    start4.className='xx2';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 2){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 1){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx3';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 0){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}
+	}
+	start4.onmouseout = function(){
+		if(info.index == undefined){
+		info.style.display = 'none'
+		start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx2';
+		info.innerHTML=arr[info.index]
+		}
+	if (info.index == 4) {
+		start4.className='xx';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 3){
+	    start4.className='xx2';
+		start3.className='xx';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 2){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx';
+		start1.className='xx';
+		start0.className='xx';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 1){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx3';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}else if(info.index == 0){
+	    start4.className='xx2';
+		start3.className='xx2';
+		start2.className='xx2';
+		start1.className='xx2';
+		start0.className='xx3';
+		info.innerHTML=arr[info.index]
+	}
+	}
+	
+</script>
+</body>
+</html>

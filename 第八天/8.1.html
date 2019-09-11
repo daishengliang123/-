@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function fn(a,b){
+    //     let num=0;
+    //     for(let i=0;i<arguments.length;i++){
+    //         num+=arguments[i];
+    //     }
+        
+    //     console.log(num)
+
+    // }
+    // fn(1,2,3,4,4,5,5,7);
+
+    // function fn(a,b){
+    //     let num=0;
+    //     for(let i=0;i<arguments.length;i++){
+    //         num+=arguments[i];
+    //     }
+    //     console.log(num);
+    // }
+    // fn(1,2,3,4,4,5,5,7);
+    // function fn(a,b){
+    //     let num=0;
+    //     for(let i=0;i<arguments.length;i++){
+    //         num+=arguments[i];
+    //     }
+    //     console.log(num);
+    // }
+    // fn(1,2,3,4,4,5,5,7);
+//     for(var i=0;i<6;i++){
+//   alert(i);
+//   for(var i=2;i<4;i++){
+//     alert(i);
+//   }
+// }
+// substring(起始位置,结束位置但不包括结束位置)
+//             截取字符串中指定位置的字符
+//             如果只传一个参数，那么从第几位起，截取到字符串最后
+
+//             第一位不能为负数，不然会转成0
+
+//             第一位的数字要比第二位的数字小，不然也会自动调换位置。
+
+
+//         substr(起始位置,截取几个)
+//             截取字符串中指定位置的字符
+//             如果只传一个参数，那么从第几位起，截取到字符串最后
+            
+//         charCodeAt 
+//             //把字符串转成unicode编码值
+
+//         includes('指定字符串')
+//             指定字符是否在整个字符串中出现，只要出现就返回true,否则false
+
+//         indexOf(指定字符,从第几位开始)  从前往后找,返回的是指定字符串的下标
+
+//         lastIndexOf(指定字符,从第几位开始) 从后往前找，返回的是指定字符串的下标
+
+
+let s=new String('abc');
+s.length=0;
+console.log(s.length);
+console.log('acb');
+
+// let str='abch932yrb0c2unxqp9';
+// console.log(str.substring(4,7));//932
+// console.log(str.substring(4,0));//abch
+// console.log(str.substring(4,3));//h  反过来时候当其时大于结束时结果为结束
+// console.log(str.substring(4,4));//9
+// console.log(str.substring(4));//932yrb0c2unxqp9
+// console.log(str.substring(5,6));//3
+// console.log(str.substring(5))//32yrb0c2unxqp9
+// console.log(str.substring(7,9));//yr
+//substring(开始位置，结束位置)
+
+
+
+// let str='abch932yrb0c2unxqp9';
+// //截取数从起始位置开始，包含起始位置
+// console.log(str.substr(5,7))//32yrb0c
+// console.log(str.substr(7,2))//yr
+// console.log(str.substr(9,10))
+// console.log(str.substr(4));
+// console.log(str.substr(2,1));
+// console.log(str.substr[0])
+//substr（起始位置，截取几个）
+
+// charCodeAt把字符串转成unicode编码值
+// charCodeAt把字符串转成unicode编码值
+// charCodeAt把字符串转成unicode编码值
+// charCodeAt把字符串转成unicode编码值
+// charCodeAt把字符串转成unicode编码值
+// let str='abch932yrb0c2unxqp9';
+// console.log(str.includes('b'));//true
+// console.log(str.includes('a'));//true
+// console.log(str.includes('4'));//false
+// console.log(str.includes('y'));//true
+// console.log(str.includes('s'))//false
+
+//indexOf(指定字符,从第几位开始)  从前往后找,返回的是指定字符串的下标
+// let str='abch932yrb0c2unxqp9';
+// console.log(str.indexOf(9,4));//4
+// console.log(str.indexOf(9,5));//18
+
+// //lastIndexOf(指定字符,从第几位开始) 从后往前找，返回的是指定字符串的下标
+// //这个从几位开始是索引
+// console.log(str.lastIndexOf(9,0));
+// //-1
+
+
+// console.log(str.lastIndexOf(9,1));
+// //-1
+// console.log(str.lastIndexOf(9,5));//4
+// console.log(str.lastIndexOf(9,2));
+// //-1
+// console.log(str.lastIndexOf(9,3));
+// //-1
+
+
+ let str='abch932yrb0c2unxqp9';
+ let str2='txt.html.css.js';
+ console.log(str2.substr(str2.lastIndexOf('.')+1));
+ console.log(str2.substr(str2.indexOf('.')+10));
+
+    </script>
+</body>
+</html>

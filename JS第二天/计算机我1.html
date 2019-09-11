@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="i1">
+    <select name="" id="z1">
+        <option id="p1">+</option>
+        <option value="-" id="p2">-</option>
+        <option value="*" id="p3">*</option>
+        <option value="/" id="p4">/</option>
+        <option value="%" id="p5">%</option>
+    </select>
+    <input type="text" id="i2">
+    <span>=</span>
+    <input type="text" id="i3">
+    <button id="j1">计算</button>
+</body>
+<script>
+
+
+    j1.onclick = function () {
+        let s1 = i1.value;
+        let s2 = i2.value;
+        console.log(s1, s2);
+        // let s3=parseFloat(i3.value);
+        // 内容不能为空
+        //     内容必须是能够转为数字的字符串
+        //     除数和取余数都不能为0
+        //     保留2位小数
+
+        if (!s1 == '') {
+            if (!s2 == '') {//输入不为空
+                let s1 = parseFloat(i1.value);
+                let s2 = parseFloat(i2.value);
+                let count = 0;
+                if (!isNaN(s1)) {
+                    if (!isNaN(s2)) {
+                        if (z1.value == '+') {
+                            count = s1 + s2;
+                        }
+                        else if (z1.value == '-') {
+                            count = s1 - s2;
+                        }
+                        else if (z1.value == '*') {
+                            count = s1 * s2;
+                        }
+                        else if (z1.value == '/') {
+                            if (!s2 == 0) {
+
+                            } else {
+                                alert('除数不能为0')
+                            }
+                            count = s1 / s2;
+                        }
+                        else if (z1.value == '%') {
+                            if (!s2 == 0) {
+
+                            } else {
+                                alert('余数不能为0')
+                            }
+                            count = s1 % s2;
+                        }
+                        i3.value = count.toFixed(2);
+
+                    } else {
+                        alert("第二个数字是NaN");
+                    }
+
+                } else {
+                    alert("第一个数字是NaN");
+                }
+
+
+
+
+            }
+            else {
+                alert('第二个框子不能为空')
+            }
+        }
+        else {
+            alert('第一个框子不能为空')
+        }
+
+        //   if()
+
+
+
+    }
+
+
+</script>
+
+</html>

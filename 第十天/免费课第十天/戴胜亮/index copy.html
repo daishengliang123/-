@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评分</title>
+		<style>
+			body,h1 {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+			.starts{
+				overflow:hidden;
+			}
+			.starts span{
+				display: block;
+				float: left;
+				/* padding: 3px; */
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="pingfen.css"/>
+	</head>
+<body>
+	<div class="wrap">
+		<div class="baidu">
+			<div id="caption" class="caption">
+				<h1></h1>
+				<span>总体评价</span>
+			</div>
+			<div class="context">
+				<ul class="starts">
+					<li id="start0" class="xx2"></li>
+					<li id="start1" class="xx2"></li>
+					<li id="start2" class="xx2"></li>
+					<li id="start3" class="xx2"></li>
+					<li id="start4" class="xx2"></li>
+					
+				</ul>
+				<div id="info" class="info"></div>
+			</div>
+			<div id="tips"  class="tips">
+				小提示：点击星星就能打分
+			</div>
+		</div>
+	</div>
+
+<script>
+	/*
+		xx2 -> 空星
+		xx -> 有星
+		xx3 -> 透明星
+	*/
+	let arr = ['极差', '一般', '不错', '推荐', '力推'];
+
+let lis=document.querySelectorAll('li')
+// console.log(lis);
+for(let i=0;i<lis.length;i++){
+	lis[i].index=i;
+	lis[i].onclick=function(){
+		info.innerHTML=arr[i];
+		info.style.display='block';
+		info.index=i;
+		fn(this.index)
+	}
+	
+}
+for(let i=0;i<lis.length;i++){
+	// lis[i].index=i;
+	lis[i].onmouseover=function(){
+		info.innerHTML=arr[i];
+		info.style.display='block';
+		// info.index=i;
+		fn(this.index)
+	}
+	
+}
+for(let i=0;i<lis.length;i++){
+	// lis[i].index=i;
+	lis[i].onmouseout=function(){
+		if(info==undefined){
+			info.style.display='none';
+			for(let i=0;i<lis.length;i++){
+				lis[i].className='xx2'
+			}
+		}else{
+				fn(info.index)
+			}
+	}
+}
+function fn(n){
+	if(n==0){
+		lis[0].className='xx3';
+		lis[1].className=lis[2].className=lis[3].className=lis[4].className='xx2';
+	}else if(n==1){
+		lis[1].className='xx3';
+		lis[0].className='xx3';
+		lis[2].className=lis[3].className=lis[4].className='xx2';
+}else if(n==2){
+		lis[2].className='xx';
+		lis[0].className='xx';
+		lis[1].className='xx';
+		lis[3].className=lis[4].className='xx2';
+}else if(n==3){
+		lis[3].className='xx';
+		lis[0].className='xx';
+		lis[1].className='xx';
+		lis[2].className='xx';
+		lis[4].className='xx2';
+}else if(n==4){
+		lis[4].className='xx';
+		lis[0].className='xx';
+		lis[1].className='xx';
+		lis[2].className=lis[3].className='xx';
+}
+
+}
+
+
+
+
+
+// let lis = document.querySelectorAll('li');
+
+// for (let i = 0; i < lis.length; i++) {
+// 	lis[i].index = i
+// 	lis[i].onclick = function(){
+// 		info.style.display = 'block'
+// 		info.innerHTML = arr[i]
+// 		info.index = i
+// 		fn(this.index)
+// 	}
+// }
+// for (let i = 0; i < lis.length; i++) {
+// 	lis[i].onmouseover = function(){
+// 		info.style.display = 'block'
+// 		info.innerHTML = arr[i]
+// 		fn(this.index)
+// 	}
+// }
+// for (let i = 0; i < lis.length; i++) {
+// 	lis[i].onmouseout = function(){
+// 		if(info.index == undefined){
+// 			info.style.display = 'none';
+// 			for (let i = 0; i < lis.length; i++) {
+// 				lis[i].className = 'xx2'
+// 			}
+// 		}else{
+// 			fn(info.index)
+// 		}
+// 	}
+// }
+// function fn(n){
+// 	if(n == 0){
+// 		lis[0].className = 'xx3'
+// 		lis[1].className = lis[2].className =lis[3].className =lis[4].className = 'xx2'
+// 	}else if(n == 1){
+// 		lis[0].className = lis[1].className = 'xx3'
+// 		lis[2].className =lis[3].className =lis[4].className = 'xx2'
+// 	}
+// 	else if(n == 2){
+// 		lis[0].className = lis[1].className =lis[2].className = 'xx'
+// 		lis[3].className =lis[4].className = 'xx2'
+// 	}else if(n == 3){
+// 		lis[0].className = lis[1].className =lis[2].className =lis[3].className = 'xx'
+// 		lis[4].className = 'xx2'
+// 	}else if(n == 4){
+// 		lis[0].className = lis[1].className =lis[2].className =lis[3].className =lis[4].className = 'xx'
+// 	}
+// }
+</script>
+</body>
+</html>

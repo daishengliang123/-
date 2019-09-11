@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box div {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            float: left;
+            margin: 5px;
+        }
+
+        .active-l {
+            background: lightskyblue;
+        }
+
+        .active-d {
+            background: blue;
+        }
+
+        #active-l {
+            background: lightskyblue;
+        }
+
+        #active-d {
+            background: blue;
+        }
+
+        #white {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script>
+        let boxs = document.querySelectorAll("#box div");
+        for (var i = 0; i < boxs.length; i++) {
+            boxs[i].index = i;
+            boxs[i].onmouseover = function () {
+                for (let j = 0; j <= this.index; j++) {
+                    if (this.index > 1) {
+                        boxs[j].className = 'active-d'
+                    }
+                    else {
+                        boxs[j].className = 'active-l'
+                    }
+                }
+            }
+            boxs[i].onclick = function () {
+                for (let j = 0; j <= this.index; j++) {
+                //     if (this.index == 4) {
+                        boxs[j].id = 'active-d'
+                    }
+                    else if(this.index == 3){
+                        boxs[j].id = 'active-d'
+                        boxs[j+1].id = 'white'
+                    }
+                    else if(this.index == 2){
+                        boxs[j].id = 'active-d'
+                        boxs[j+1,j+2].id = 'white'
+                    }
+                    else if(this.index == 1){
+                        boxs[j].id = 'active-l'
+                        boxs[j+1,j+2,j+3].id = 'white'
+                    }else if(this.index == 0){
+                        boxs[j].id = 'active-l'
+                        boxs[j+1,j+2,j+3,j+4].id = 'white'
+                    }
+                }
+            }
+            boxs[i].onmouseout = function () {
+                for (let j = 0; j <= this.index; j++)
+                    boxs[j].className = ''
+            }
+        }
+    </script>
+</body>
+
+</html>

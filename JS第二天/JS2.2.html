@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt1">提交</button>
+    <span id="s1">12.5</span><span>+</span><span id="s2">12</span><span>=</span><span id="s3"></span>
+    <script>
+    const bt1=document.getElementById('bt1')
+    const s1=document.getElementById('s1')
+    const s2=document.getElementById('s2')
+    const s3=document.getElementById('s3')
+bt1 .onclick=function()   {
+    // s3.innerText=s1.innerText+s2.innerText;
+    // s3.innerText=s1*1 .innerText+s2*1 .innerText;
+    // s3.innerText=s1.innerText*1+s2 .innerText*1;
+    s3.innerText=parseInt(s1.innerText*1)+s2.innerText*1
+} 
+    
+    
+    
+    </script>
+</body>
+</html>

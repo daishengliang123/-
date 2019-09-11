@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    #n1,#w1,#t1{
+        width: 100px;
+        height: 300px;
+        
+    }
+    #n1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -150px;
+    }
+    #w1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+    #t1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 50px;
+        margin-top: -150px;
+    }
+    #tu1,#tu2,#tu3{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        margin-top: -150px;
+        display: none;
+    }
+    img{
+        width: 300px;
+        height: 300px; 
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <button  id="n1">你</button><button  id="w1">我</button><button  id="t1">他</button>
+    <button id="tu1"><img src="./1.gif" alt=""></button>
+    <button id="tu2"><img src="./2.gif" alt=""></button>
+    <button id="tu3"><img src="./3.gif" alt=""></button>
+    
+    <script>
+   const n1=document.getElementById('n1') 
+   const w1=document.getElementById('w1') 
+   const t1=document.getElementById('t1') 
+   const tu1=document.getElementById('tu1') 
+   const tu2=document.getElementById('tu2') 
+   const tu3=document.getElementById('tu3') 
+    
+
+    n1 .onclick=function(){
+        n1.style.display='none'
+        w1.style.display='none'
+        t1.style.display='none'
+        tu1.style.display='block'
+
+    }
+    w1 .onclick=function(){
+        n1.style.display='none'
+        w1.style.display='none'
+        t1.style.display='none'
+        tu2.style.display='block'
+
+    }
+    t1 .onclick=function(){
+        n1.style.display='none'
+        w1.style.display='none'
+        t1.style.display='none'
+        tu3.style.display='block'
+
+    }
+    tu1 .onclick=function(){
+        n1.style.display='block'
+        w1.style.display='block'
+        t1.style.display='block'
+        tu1.style.display='none'
+
+    }
+    tu2 .onclick=function(){
+        n1.style.display='block'
+        w1.style.display='block'
+        t1.style.display='block'
+        tu2.style.display='none'
+
+    }
+    tu3 .onclick=function(){
+        n1.style.display='block'
+        w1.style.display='block'
+        t1.style.display='block'
+        tu3.style.display='none'
+
+    }
+
+    </script>
+</body>
+</html>

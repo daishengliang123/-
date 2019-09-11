@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+function queryURLParameter(url){
+let a1=str.split('?')
+let a2=a1[1].split('#')
+// console.log(a2)
+let hash=a2[1]
+let a3=a2[0].split('&')
+// console.log(a3)
+let obj={}
+a3.forEach(item => {
+   let a4=item.split('=')
+  
+   obj[a4[0]]=a4[1]
+//    console.log(obj)
+});
+ obj.HASH=hash;
+//  console.log(a6)
+console.log(obj)
+return obj
+
+// let a7=a6.push('aji')
+
+// let a1=url.split('?')[1]
+// // console.log(a1)
+// let a2=a1.split('#')
+// // console.log(a2)
+// let a3 = a2[0].split('&')
+// let obj ={}
+// let o = a3[0].split('=')
+// // console.log(o)
+// let i = a3[1].split('=')
+// let u = a3[2].split('=')
+// // obj.length = 3
+// console.log(o)
+// obj[o[0]]=o[1]
+// obj[i[0]]=i[1]
+// obj[u[0]]=u[1]
+// console.log(obj)
+
+// console.log(a3[1].split('=').join(':'))
+// for(let i=0;i<a3.length;i++){
+//     a3[i].split('=').join(':')
+//     console.log(a3)
+// }
+// 
+// let a3=a2[1]
+// console.log(a3)
+// let a4=a2[0]
+// console.log(a4)
+// let a5=a4.split('&')
+// console.log(a5)
+// let a6={}
+// a5.forEach(item=>{
+//     let a=item.split('=')
+//     a5[a[0]]=a[1]
+// })
+// return a5;
+}
+
+
+let str = 'http://www.zhufengpeixun.com/stu/?name=zxt&age=28&sex=0#teacher';
+
+let result = queryURLParameter(str);
+
+// console.log(result);
+
+
+//    name:'zxt',
+
+//    age:28,
+
+//    sex:0,
+
+//    HASH:'teacher'
+
+//  }
+
+// */
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+#box{
+    width:400px;
+}
+#box2{
+width: 400px;
+height: 30px;
+}
+button{
+    width: 20px;
+    height: 15px;
+}
+#box div{
+    width:400px;
+    height:200px;
+    border:1px solid #000;
+    display:none;
+}
+#box div.show{
+    display:block;
+}
+.active{
+    background: yellow;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="box">
+        <div id="box2">
+        <button class="active">按钮一</button>
+        <button >按钮二</button>
+        <button>按钮三</button>
+    </div>
+        <div class="show">内容一</div>
+        <div>内容二</div>
+        <div>内容三</div>
+    </div>
+    <script>
+    // const btns=document.querySelectorAll('button')
+    // const divs=document.querySelectorAll('#box div')
+    let
+    divs=document.querySelectorAll(' #box #box2 button')
+    // let btn=btns[0];
+   for(var i=0;i<box2.length;i++){
+       divs[i].index=i;
+       divs[i].onclick=function(){
+           for(let j=0;j<=this.index;j++){
+               if(this.index>1){
+                   divs[j].className='active'
+               }else{
+                divs[j].className='active';  
+               }
+           }
+       }
+   }
+    
+    
+    </script>
+    
+        
+    </body>
+    </html>

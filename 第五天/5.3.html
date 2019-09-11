@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <style>
+    #box div{
+        width:50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+    top:0;
+    left:0;
+    }
+  
+  </style>
+</head>
+<body>
+    <!-- <div id="box"></div>
+    <script>
+    let html='';
+    let ary=['red','green','pink']
+    // for(let i=0; i<=100;i++){
+    //     html +=`<div>${i+1}</div>`;
+    // }
+     for(let i=0; i<=10;i++){
+        for(let j=0; j<=10;j++){
+            html +=`<div style="background-color:${ary[i%3]};left:${i*50}px;top:${j*50}px;"></div>`;
+        }
+       
+    }
+    box.innerHTML = html;
+    // 设置一个100个方块
+
+
+
+    const divs=document.querySelectorAll('#box div');
+
+    for(let i=0;i<divs.length;i++){
+divs[i].onmouseover=function(){
+    let l=this.style.left;
+    let t=this.style.top;
+    this.style.backgroundImage='url(4.png)';
+    this.style.backgroundPosition=`-${l} -${t}`;
+
+}
+    }
+    </script> -->
+    <div id="box">1</div>
+    <script>
+    let html='';
+    let ary=['green','red','pink','yellow'];
+    for(let i=0;i<=10;i++){
+        for(let b=0;b<=10;b++){
+        html+=`<div style="background-color:${ary[i%4]};left:${i*50}px;top:${b*50}px;"></div>`;
+
+    }
+    }
+    box.innerHTML = html;
+const divs=document.querySelectorAll('#box div');
+for(let i=0;i<divs.length;i++){
+    divs[i].onmouseover=function(){
+        let l=this.style.left;
+        let t=this.style.top;
+        this.style.backgroundImage='url(4.png)';
+        this.style.backgroundPosition=`-${l} -${t}`;
+
+    }
+}
+    </script>
+</body>
+</html>

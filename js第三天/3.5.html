@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="i1">
+    <select name="" id="zo">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+        <input type="text" id="i2">
+        <span>=</span>
+        <input type="text" id="i3">
+        <button id="jis">计算</button>
+        <script>
+            jis.onclick = function () {
+
+                //   let s3=s3.value
+                // 内容不能为空
+                //     内容必须是能够转为数字的字符串
+                //     除数和取余数都不能为0
+                //     保留2位小数
+                let s1 = parseFloat(i1.value)
+                let s2 = parseFloat(i2.value)
+                if (!s1 == '') {
+                    if (!s2 == '') {
+                        if (!isNaN(s1)) {
+                            if (!isNaN(s2)) {
+                                if (zo.value == '+') {
+                                    i3.value = s1 + s2
+                                } else if (zo.value == '-') {
+                                    i3.value = s1 - s2
+                                } else if (zo.value == '*') {
+                                    i3.value = s1 * s2
+                                } else if (zo.value == '/') {
+                                    i3.value = s1 / s2
+                                    if (s2 !== 0) {
+
+                                    } else {
+                                        alert('除数不能为0')
+                                    }
+                                } else if (zo.value == '%') {
+                                    i3.value = s1 % s2
+                                    if (s2 !== 0) {
+
+                                    } else {
+                                        alert('余数不能为0')
+                                    }
+                                }
+                            } else {
+                                alert('第二内容为NaN')
+
+                            }
+
+                        } else {
+                            alert('第一内容为NaN')
+
+                        }
+
+                    } else {
+                        alert('第一个框不能为空')
+
+                    }
+
+
+                } else {
+                    alert('第一个框不能为空')
+
+
+
+                }
+            }
+    </script>
+    
+        
+    </body>
+    </html>

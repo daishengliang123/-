@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .active{
+    background:pink;
+}
+#box{
+    width: 200px;
+    height: 200px;
+    background: aliceblue;
+}
+#show{
+    display:block;
+}
+    </style>
+</head>
+<body>
+        <button class="active">按钮一</button>
+        <button>按钮二</button>
+        <button>按钮三</button>
+        <div id="show">内容以</div>
+   <script>
+//     let a;
+//     let ary=['1',6,true,null,a];
+//     function forEach(ary,callback){
+//         for(let i=0;i<ary.length;i++){
+//             callback(ary[i],i,ary);
+//         }
+//     }
+//    let f=forEach(ary,(item,index)=>{
+//        console.log(index);
+//    }
+let ary=['内容以','内容er','内容san'];
+  let btns=document.querySelectorAll('button') ;
+let btn=btns[0];
+let len=btns.length;
+
+for(let i=0;i<len;i++){
+
+    btns[i].index=i
+    btns[i].onclick=function(){
+        if(this===btn)
+        return;
+      this.className='active';
+      btn.className='';
+    ary(this.index)=show.innerHTML
+
+btn=this;
+        
+    }
+    
+}
+
+   </script>
+</body>
+</html>

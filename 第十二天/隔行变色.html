@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //剪切地址
+    // var oLis = document.getElementsByTagName('li');
+    // var oLis = document.querySelectorAll('ul>li');
+    // for(var i = 0; i < oLis.length;i++){
+    //     var str = i%2 ? 'salmon' : 'darkcyan';
+    //     oLis[i].style.background = str;
+    //     oLis[i].mybg = str;
+    //     oLis[i].myIndex = i;
+    //     oLis[i].onmouseenter = function(){
+    //         this.style.background = 'gold'
+    //     }
+    //     oLis[i].onmouseleave = function(){
+    //         this.style.background = this.mybg;
+    //     }
+    //     oLis[i].onclick = function(){
+    //         alert(`我是第${this.myIndex+1}个元素`)
+    //     }
+    // }
+////隔行变色
+function getStr() {
+    var str = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789';
+
+
+//     timer=setInterval(function(){
+// let s='';
+// while(s.length<4){
+//     let s1=str(Math.floor(math.radom()*61))
+//     if(!s.includes(s1)){
+//         s+=s1
+//     }  
+// }
+// box.innerHTML=s
+
+
+
+//     },100)
+    // Math.round(Math.randon()*61)
+    // var s = '';
+    // while (s.length < 4) {
+    //     var n = Math.round(Math.random()*61);
+    //     if(s.indexOf(str[n])==-1){
+    //         s += str[n];
+    //     }
+    // }
+    // for(var i = 0; i < 4 ;){
+    //     var n = Math.round(Math.random()*61);
+    //     if(s.indexOf(str[n])==-1){
+    //         s += str[n];
+    //         i++
+    //     }
+    // }
+    // return s
+
+
+    let num='';
+    while(num.length<4){
+        let sum=math.round(math.radom()*61)
+        if(!num.includes(sum))
+        num+=sum;
+    }
+}
+var oDiv = document.getElementById('box');
+box.onclick = function () {
+    this.innerHTML = getStr();
+}
+
+    
+    
+    
+    </script>
+</body>
+</html>

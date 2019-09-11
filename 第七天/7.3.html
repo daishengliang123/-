@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        includes
+            查看数组中有没有指定的数据，有就返回true，否则false
+    */    
+    // let ary=[true,false,1,6,'9',[null]];
+
+    // console.log(ary.includes('10'));
+    // console.log(ary.includes('9'));
+    // console.log(ary.includes('10'))
+    // console.log(ary.includes('9v'))
+    // console.log(ary.includes('10'))
+    
+     /*
+        indexOf(指定数据,从多少开始)
+            找到指定数据对应的索引并返回，如果没有就返回-1
+    */
+
+    let ary = [true,1,false,6,'9',false,[null]];
+console.log(ary.indexOf(false,2));
+
+console.log(ary.indexOf(2));
+
+console.log(ary.indexOf('9'))
+// console.log(ary.indexOf('1'))
+// console.log(ary.indexOf(1))
+// console.log(ary.indexOf(false,5))
+// console.log(ary.indexOf(false,2))
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+//html
+<input type="text" id="num1" value="" />
+    <select id="mySelect">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2" value="" />
+    <input type="button" id="jisuan" value="计算" />
+//js
+<script>
+    var oTxt1 = document.getElementById('num1');
+    var oTxt2 = document.getElementById('num2');
+    var oSelect = document.getElementById('mySelect');
+    var oBtn = document.getElementById('jisuan');
+    oBtn.onclick=function(){
+        switch(oSelect.value){
+            case '+':
+                alert(parseInt(oTxt1.value)+parseInt(oTxt2.value));
+                break;
+            case '-':
+                alert(parseInt(oTxt1.value)-parseInt(oTxt2.value));
+                break;
+            case '*':
+                alert(parseInt(oTxt1.value)*parseInt(oTxt2.value));
+                break;
+            case '/':
+                if(parseInt(oTxt2.value) !== 0){
+                    alert(parseInt(oTxt1.value)/parseInt(oTxt2.value));
+                }else{
+                    alert('除数不能为0');
+                }
+                 
+                break;
+            default:
+                alert('Bug!!!');
+        }
+    }
+</script>

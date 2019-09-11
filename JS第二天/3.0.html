@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="s1">
+    <select name="" id="z1">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+        <input type="number" id="s2">
+        <span>=</span>
+        <input type="number" id="s3">
+        <button id="bt1">计算</button>
+    </select>
+    <script>
+    bt1 .onclick=function(){
+        let a1=parseInt(s1.value)  
+        let a2=parseInt(s2.value)
+
+     if(z1.value=='+') {
+         s3.value=a1+a2;
+     } 
+     if(z1.value=='-') {
+         s3.value=a1-a2;
+     } 
+     if(z1.value=='*') {
+         s3.value=a1*a2;
+     } 
+     if(z1.value=='/') {
+         s3.value=a1/a2;
+     } 
+     if(z1.value=='%') {
+         s3.value=a1%a2;
+     } 
+
+    }
+    
+    
+    
+    
+    </script>
+</body>
+</html>

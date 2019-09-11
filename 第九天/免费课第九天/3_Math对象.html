@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+        Math
+
+            向下取整    
+                Math.floor(1.6567) -> 1
+
+
+            向上取整 
+                Math.ceil(1.1567) -> 2
+
+            取绝对值
+                Math.abs(-1) 正负为1
+
+            取最大值
+                Math.max(1,2,3,4,6)  找最大值6
+                console.log(Math.max(...[1,10,20,80,'90']));使用扩展运算符能实现max包数组
+
+            取最小值
+                 Math.min(1,2,3,4,6)  找最小值1
+
+            四舍五入:
+                Math.round(4.1) -> 4  
+                Math.round(4.5) -> 5  
+
+            随机数:
+                Math.random  0 - 1之前的无线不循环小数
+
+            Math.PI  3.141592653589793
+
+            Math.cos/Math.sin
+
+            Math.sqrt  开方
+
+            Math.pow 去密（8*8）  Math.pow(8,2)
+
+           
+
+    */
+    console.dir(Math);
+
+    // console.log(Math.floor(1.6567));向下取整
+console.log(Math.floor(1.567));
+console.log(Math.floor(1.9999999999))  
+console.log(Math.floor(1.44444444444))  
+
+
+    // console.log(Math.ceil(1.1567));向上取整
+    console.log(Math.ceil(1.123));
+    console.log(Math.ceil(1.22222))  
+  
+
+    // console.log(Math.abs(-1));取绝对值
+
+    console.log(Math.abs(-1));
+    console.log(Math.abs(-10));
+    console.log(Math.abs(23)) ;
+
+  
+  
+
+
+    // console.log(Math.max(...[1,10,20,80,'90']));取最大值
+    console.log(Math.max(...[1,10,20,80,[90]]))  ;
+
+
+    // console.log(Math.min(1,10,20,80));取最小值
+    console.log(Math.min(1,10,111))  
+    console.log(Math.min(2,20,122))  
+
+    // console.log( Math.pow(8,2) )去密
+    console.log(Math.pow(8,2)) 
+    console.log(Math.pow(2,8))  
+ 
+
+
+    // console.log(Math.round(4.35));四舍五入
+    console.log(Math.round(4.5))  
+    console.log(Math.round(44.111))  
+    console.log(Math.round(34.67))  
+
+
+
+    console.log(Math.random());// 随机数:
+    console.log(Math.random())  
+
+    // console.log(typeof Math);
+
+
+
+</script>
+</body>
+</html>

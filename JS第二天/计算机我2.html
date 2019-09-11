@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <button id="jia">+</button>
+    <button id="jian">-</button>
+    <button id="chen">*</button>
+    <button id="chu">/</button>
+    <button id="yu">%</button>
+
+    <Script>
+   jia.onclick=function(){
+       
+       let a1 = (num1.value)*1;
+       let a2 = (num1.value)*1;
+       num3.value=a1 + a2;
+    //    console.log(a1+a2)
+   }
+   jian.onclick=function(){
+       let a1= num1.value;
+       let a2= num2.value;
+       num3.value=a1-a2;
+    //    console.log(a1-a2)
+
+   }
+   chen.onclick=function(){
+       let a1= num1.value;
+       let a2= num2.value;
+       num3.value=a1*a2;
+    //    console.log(a1*a2)
+
+   }
+   chu.onclick=function(){
+       let a1= num1.value;
+       let a2= num2.value;
+       num3.value=a1/a2;
+   }
+   yu.onclick=function(){
+       let a1= num1.value;
+       let a2= num2.value;
+       num3.value=a1%a2;
+   }
+    
+    </Script> 
+
+    
+</body>
+</html>
